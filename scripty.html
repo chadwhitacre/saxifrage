@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <style>
+      body {
+        margin: 0;
+        padding: 24pt;
+        font: normal 12pt/14pt Arial;
+        background: red;
+      }
+      #slot-window {
+        height: 14pt;
+        overflow: hidden;
+        background: white;
+        position: relative;
+      }
+      #slot-wheel {
+        position: relative;
+      }
+    </style>
+    <script>
+      $(document).ready(function()
+      {
+        $('#slot-window').mouseover(function ()
+        {
+          var offset = Math.round(Math.random() * 7) * 14
+          $('#slot-wheel').css("top", "-" + offset + "pt");
+        });
+        $('#slot-window').mouseout(function ()
+        {
+          $('#slot-wheel').css("top", "0");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div id="slot-window">
+      <div id="slot-wheel">
+        <div>I'm Feeling Doodley</div>
+        <div>I'm Feeling Artistic</div>
+        <div>I'm Feeling Hungry</div>
+        <div>I'm Feeling Puzzled</div>
+        <div>I'm Feeling Trendy</div>
+        <div>I'm Feeling Stellar</div>
+        <div>I'm Feeling Playful</div>
+        <div>I'm Feeling Wonderful</div>
+      </div>
+    </div>
+
+    <div></div>
+  </body>
+</html>
