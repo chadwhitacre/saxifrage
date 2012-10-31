@@ -30,18 +30,30 @@
       }
     </style>
     <script>
-      $(document).ready(function()
+
+      var Scripty = {};
+
+      Scripty.onMouseEnter = function()
       {
-        $('#slot-window').mouseover(function ()
-        {
-          var offset = Math.round(Math.random() * 7) * 14
-          $('#slot-wheel').css("top", "-" + offset + "pt");
-        });
-        $('#slot-window').mouseout(function ()
-        {
-          $('#slot-wheel').css("top", "0");
-        });
-      });
+        var offset = Math.round(Math.random() * 7) * 14;
+        var cssboom = {"top": "-" + offset + "px"};
+
+        $('#slot-wheel').animate(cssboom, 1200, "swing");
+      }
+
+      Scripty.onMouseLeave = function()
+      {
+        var reset = {"top": "0" + "px"};
+        $('#slot-wheel').animate(reset, 1200, "swing");
+      }
+
+      Scripty.init = function()
+      {
+        $('#slot-wheel').mouseenter(Scripty.onMouseEnter);
+        $('#slot-wheel').mouseleave(Scripty.onMouseLeave);
+      }
+
+      $(document).ready(Scripty.init);
     </script>
   </head>
   <body>
