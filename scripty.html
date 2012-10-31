@@ -5,18 +5,28 @@
     <style>
       body {
         margin: 0;
-        padding: 24pt;
-        font: normal 12pt/14pt Arial;
+        padding: 24px;
+        font:normal 12px/14px Arial;
         background: red;
       }
       #slot-window {
-        height: 14pt;
-        overflow: hidden;
-        background: white;
+        text-align: center;
+        height: 13px;
         position: relative;
+        overflow: hidden;
+      }
+      #slot-wheel span {
+        cursor: pointer;
+        background:white;
+        border-style: outset;
+        border-width: 3px;
+        border-color: black; 
+        margin:6px;
       }
       #slot-wheel {
+        padding:0px;
         position: relative;
+        top: 0px;
       }
     </style>
     <script>
@@ -37,17 +47,15 @@
   <body>
     <div id="slot-window">
       <div id="slot-wheel">
-        <div>I'm Feeling Doodley</div>
-        <div>I'm Feeling Artistic</div>
-        <div>I'm Feeling Hungry</div>
-        <div>I'm Feeling Puzzled</div>
-        <div>I'm Feeling Trendy</div>
-        <div>I'm Feeling Stellar</div>
-        <div>I'm Feeling Playful</div>
-        <div>I'm Feeling Wonderful</div>
+        <div><span>I'm Feeling Doodley</span></div>
+        <div><span>I'm Feeling Artistic</span></div>
+        <div><span>I'm Feeling Hungry</span></div>
+        <div><span>I'm Feeling Puzzled</span></div>
+        <div><span>I'm Feeling Trendy</span></div>
+        <div><span>I'm Feeling Stellar</span></div>
+        <div><span>I'm Feeling Playful</span></div>
+        <div><span>I'm Feeling Wonderful</span></div>
       </div>
     </div>
-
-    <div></div>
   </body>
 </html>
